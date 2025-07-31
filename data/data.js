@@ -506,9 +506,13 @@ const chooseRandomQuestion = function () {
   quizQuestions.push(questionsDataBase[random]);
 };
 
-for (let i = 0; i < 7; ++i)
-  chooseRandomQuestion();
+const generateRandomQuestions = function () {
+  mp.clear();
+  quizQuestions.length = 0;
 
+  for (let i = 0; i < 7; ++i)
+    chooseRandomQuestion();
+};
 
 const elements = {
   gameContainer: null,
@@ -524,4 +528,4 @@ const elements = {
   score: 0,
 };
 
-export { quizQuestions, elements };
+export { quizQuestions, elements, generateRandomQuestions };

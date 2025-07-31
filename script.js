@@ -1,10 +1,14 @@
 'use strict'
 
-import { quizQuestions } from './data/data.js';
-import { elements } from './data/data.js';
+import { quizQuestions, elements, generateRandomQuestions } from './data/data.js';
 
 class App {
   constructor() {
+    /*
+      You should call this first to make sure
+      that 'ratio' gets calculated correctly
+    */
+    generateRandomQuestions();
     this.initElements();
     this.attachEventListeners();
   }
@@ -104,6 +108,9 @@ class App {
 
       // Reset LoadBar Border
       this.changeLoadBarBorder('0');
+
+      // Generate new questions
+      generateRandomQuestions();
     });
   }
 
