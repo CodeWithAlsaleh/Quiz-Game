@@ -26,13 +26,5 @@ Great for testing general knowledge!
 - CSS3
 - JavaScript (ES6 Modules)
 
-## 📁 Project Structure
-
-quiz-app/
-│
-├── index.html # Main HTML file
-├── style.css # Styling
-├── script.js # Main JavaScript logic
-├── data/
-│ └── data.js # Quiz questions
-└── README.md # Project description
+## 📁 Link
+https://code-with-alsaleh-0003.netlify.app/
