@@ -75,6 +75,7 @@ class App {
     // 2) Then append your loader element into that container
     elements.questionsContainer.appendChild(elements.loadBarContainer);
 
+    elements.answerDisabled = false;
     this.listenToAnswer();
   }
 
@@ -152,9 +153,17 @@ class App {
     elements.answersContainer = document.querySelector('.answers-container');
 
     elements.answersContainer.addEventListener('click', e => {
+      /*
+        To avoid getting an error when the user clicks the answer
+        or other option more than one time for the same question
+      */
+      if (elements.answerDisabled)
+        return;
+
       this.checkAnswer(e.target.textContent);
 
       elements.questionIndex++;
+      elements.answerDisabled = true;
 
       this.increaseLoadBar();
 

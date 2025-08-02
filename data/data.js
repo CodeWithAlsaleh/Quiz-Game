@@ -526,6 +526,7 @@ const elements = {
   ratio: null,
   questionIndex: 0,
   score: 0,
+  answerDisabled: false
 };
 
 export { quizQuestions, elements, generateRandomQuestions };
