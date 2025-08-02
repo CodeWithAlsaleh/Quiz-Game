@@ -160,6 +160,11 @@ class App {
       if (elements.answerDisabled)
         return;
 
+      // To ensure that the user clicks on one of the options
+      if (!e.target.classList.contains('answer'))
+        return;
+
+
       this.checkAnswer(e.target.textContent);
 
       elements.questionIndex++;
