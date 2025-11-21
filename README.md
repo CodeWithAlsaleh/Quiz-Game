@@ -27,4 +27,4 @@ Great for testing general knowledge!
 - JavaScript (ES6 Modules)
 
 ## 📁 Link
-https://code-with-alsaleh-0003.netlify.app/
+https://code-with-alsaleh-0001.netlify.app/
